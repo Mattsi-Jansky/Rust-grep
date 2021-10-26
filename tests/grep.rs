@@ -173,7 +173,6 @@ fn test_nonexistent_file_returns_error() {
 }
 
 #[test]
-#[ignore]
 fn test_grep_returns_result() {
     let pattern = "Agamemnon";
 
