@@ -1,4 +1,4 @@
-use anyhow::Error;
+use anyhow::*;
 
 /// While using `&[&str]` to handle flags is convenient for exercise purposes,
 /// and resembles the output of [`std::env::args`], in real-world projects it is
@@ -17,18 +17,10 @@ pub struct Flags;
 
 impl Flags {
     pub fn new(flags: &[&str]) -> Self {
-        unimplemented!(
-            "Given the flags {:?} implement your own 'Flags' struct to handle flags-related logic",
-            flags
-        );
+        Flags {}
     }
 }
 
 pub fn grep(pattern: &str, flags: &Flags, files: &[&str]) -> Result<Vec<String>, Error> {
-    unimplemented!(
-        "Search the files '{:?}' for '{}' pattern and save the matches in a vector. Your search logic should be aware of the given flags '{:?}'",
-        files,
-        pattern,
-        flags
-    );
+    Err(anyhow!("something went bang"))
 }
