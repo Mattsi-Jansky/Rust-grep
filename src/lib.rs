@@ -25,7 +25,17 @@ impl Flags {
 pub fn grep(pattern: &str, flags: &Flags, files: &[&str]) -> Result<Vec<String>, Error> {
     let result = fs::read_to_string(files[0]);
     match result {
-        Ok(contents) if contents.contains(pattern) => Ok(vec![String::from(pattern)]),
+        Ok(contents) if contents.contains(pattern) => do_the_thing(contents, pattern),
         _ => Err(anyhow!("something went bang")),
     }
+}
+
+fn do_the_thing(contents: String, pattern: &str) -> Result<Vec<String>, Error> {
+    let lines = contents.split("\n");
+    for line in lines {
+        if line.contains(pattern) {
+            return Ok(vec![String::from(line)])
+        }
+    }
+    return Ok(vec![String::from(pattern)])
 }

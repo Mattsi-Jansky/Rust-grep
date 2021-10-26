@@ -191,7 +191,6 @@ fn test_grep_returns_result() {
 
 set_up_test_case!(
     #[test]
-    #[ignore]
     test_one_file_one_match_no_flags(
         pattern = "Agamemnon",
         flags = [],
