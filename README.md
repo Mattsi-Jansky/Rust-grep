@@ -1,5 +1,9 @@
 # Grep
 
+## Credit
+
+This implementation developed as part of a Mob Programming exercise with [ikatzarski](https://github.com/ikatzarski), [jfacchini](https://github.com/jfacchini), [jordancodurance](https://github.com/jordancodurance) and [Mattsi-Jansky](https://github.com/Mattsi-Jansky) at the Codurance Rust Study Group.
+
 Welcome to Grep on Exercism's Rust Track.
 If you need help running the tests or submitting your code, check out `HELP.md`.
 
